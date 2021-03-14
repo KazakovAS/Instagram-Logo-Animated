@@ -1,0 +1,71 @@
+.box {
+    height: $box_h;
+    width: $box_h;
+    overflow: hidden;
+    border-radius: 35px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -$box_h / 2;
+    margin-left: -$box_h / 2;
+    animation: box $duration*2 infinite alternate;
+
+    &:before {
+        display: block;
+        position: relative;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: $view_h;
+        background: linear-gradient($origin, $color1 0%, $color2 25%, $color3 50%, $color2 75%, $color1 100%);
+        animation: bg $duration*2 infinite linear;
+    }
+}
+
+
+@keyframes bg {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: $box_h - $view_h;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+
+@keyframes box {
+    0% {
+        transform: scale(0);
+        border-radius: 35px;
+    }
+
+    2.5% {
+        transform: scale(1.1);
+        border-radius: 50%;
+    }
+
+    5% {
+        transform: scale(1);
+        border-radius: 10px;
+    }
+
+    96% {
+        transform: scale(1);
+        border-radius: 35px;
+    }
+
+    98% {
+        transform: scale(1.1);
+        border-radius: 50%;
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
