@@ -8,6 +8,7 @@
         "build": "webpack --config webpack.prod.config.js --quiet --progress --hide-modules",
         "test": "editorconfig-checker",
         "deploy": "cd build && rsync --archive --compress --delete lerush@lerush.beget.tech:test/public_html/",
+        "deploy-GH": "gh-pages -d build",
         "lint": "eslint ./ -c .eslintrc --fix --ext .js,.vue && prettier ./ -c .prettierrc --write"
     },
     "husky": {
@@ -63,6 +64,7 @@
         "eslint-plugin-react": "^7.20.3",
         "eslint-plugin-vue": "^6.2.2",
         "file-loader": "^6.0.0",
+        "gh-pages": "^3.2.3",
         "html-webpack-plugin": "^4.3.0",
         "husky": "^4.2.5",
         "imagemin-webpack-plugin": "^2.4.2",
