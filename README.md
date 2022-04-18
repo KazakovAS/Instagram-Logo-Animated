@@ -6,6 +6,7 @@
 ## Технологии
 * SCSS
 * БЭМ
+* Webpack
 
 ## Ссылка на проект
 * [Ссылка на проект](https://kazakovas.github.io/Instagram-Logo-Animated/)
